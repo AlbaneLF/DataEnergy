@@ -282,14 +282,11 @@
                     }
         
         // set the color scale
-        var color = d3.scaleOrdinal()
-          .domain(["Deux_Sèvres", 
-                    "Loire_Atlantique", 
-                    "Maine_et_Loire", 
-                    "Vienne"])
+        const color = d3.scaleOrdinal()
+  .domain(["Vélo_électrique", "Voiture_électrique", "Voiture_thermique", "Vélo"])
+  .range(["grey", "#57517B", "#68e1fd" , "#87CEEB" ]);
       
-          .range(d3.schemeDark2);
-        
+          
         // Compute the position of each group on the pie:
         var pie = d3.pie()
           .sort(null) // Do not sort group by size
